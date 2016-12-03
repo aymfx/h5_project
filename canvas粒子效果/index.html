@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var canvas=document.createElement("canvas");
+			canvas.width=window.innerWidth;
+			canvas.height=window.innerHeight;
+			//插入页面
+			document.body.appendChild(canvas);
+			//设置背景色
+			
+			canvas.style.background="black";
+			//取出画笔 图形上下文
+			var ctx=canvas.getContext("2d");
+			var pars=[];
+			loop();
+			function loop(){
+				setInterval(function(){
+					//清空画布
+					ctx.clearRect(0,0,canvas.width,canvas.height)
+					//随机产生粒子坐标
+					var x=0.5*canvas.width;
+					var y=0.5*canvas.height;
+					//创建粒子对象
+					var p=new Particle(x,y);
+					//存到数组
+					pars.push(p);
+					for (var i=0;i<pars.length;i++) {
+						var temp=pars[i];
+						temp.drawSelf();
+						temp.updataPos();
+					}
+				},30);
+			}
+			//画圆的方法
+			function Particle(x,y){
+				//定义类的属性
+				this.xPos=x;
+				this.yPos=y;
+				//定义y方向的速度
+				this.ySpeed=-5;
+				//x方向的速度2~-2
+				this.xSpeed=Math.random()*4-2;
+				//定义重力因素
+				this.gra=0.05;
+				//定义超屏次数
+				this.con=0;
+				//更新自身的方法
+				this.updataPos=function(){
+					this.yPos+=this.ySpeed;
+					this.xPos+=this.xSpeed;
+					//更新y方向速度
+					this.ySpeed+=this.gra;
+					//判断超屏事件
+					if (this.yPos>canvas.height) {
+						this.ySpeed=-4;
+						this.con=1;
+					}
+				}
+				//定义绘制自身的方法
+				this.drawSelf=function(){
+					//画圆
+				ctx.beginPath();
+				ctx.arc(this.xPos,this.yPos,5,0,Math.PI*2,false);
+				ctx.closePath();
+				ctx.fillStyle=getRandomColor();
+				ctx.fill();
+				};
+			}
+			//产生随机色的方法
+			function getRandomColor(){
+				return "#"+Math.floor(Math.random()*16777215).toString(16);
+			}
+		</script>
+	</body>
+</html>

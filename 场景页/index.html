@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+</head>
+<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.touchSwipe.min.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="css/new_file.css"/>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+<body>
+	<div class="content">
+		
+		<div class="page page1">
+			<img src="img/indexBuilding.png" class="page1_buiding"/>
+			<img src="img/indexElements.png" class="element"/>
+			<img src="img/indexFlowers01.png" class="flow1"/>
+			<img src="img/indexFlowers02.png" class="flow2"/>
+			<img src="img/indexFlight.png" class="flight"/>
+			<img src="img/indexTxt.png" class="txt"/>
+		</div>
+		
+		<div class="page page2">
+			<img src="img/wasBg.jpg" class="wasBg"/>
+			<img src="img/wasFarm.png" class="farm"/>
+			<img src="img/wasIT.png" class="it"/>
+		</div>
+		
+		<div class="page page3">
+			<!--场景一-->
+			<img src="img/lastBusStation.png" class="station"/>
+			<img src="img/earlyTitle.png" class="early"/>
+			<img src="img/lastBusTitle.png" class="last"/>
+			<img src="img/bus.png" class="bus"/>
+			<img src="img/lastBusAvatar.png" class="avatar"/>
+			<!--场景二-->
+			<img src="img/myTeamBg.jpg" class="teamBg"/>
+			<img src="img/myTeamAvatar.png" class="teamAv"/>
+			<img src="img/myTeamWall.png" class="teamWall"/>
+			<img src="img/myTeamSpace.png" class="teamSpace"/>
+		</div>	
+		
+		<div class="page page4">
+			<img src="img/lightOffBg.jpg" class="lightBg"/>
+			<img src="img/lightOff.png" class="lightOff" onclick="light(this)"/>
+			<img src="img/clickGuide.png" class="guide"/>
+			<!--<img src="img/lightOn.png"/>-->
+			<img src="img/lightOnBg.jpg" class="lightOnBg"/>
+		</div>
+		
+	</div>	
+		
+	<img src="img/arrow-up.png" class="up" onclick="next(this)"/>
+	<img src="img/musicBtn.png" class="musicBtn" onclick="music(this)"/>
+	<audio src="img/music.mp3" id="music" autoplay="autoplay"></audio>
+</body>
+</html>

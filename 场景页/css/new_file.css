@@ -1,0 +1,249 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+.content{
+	position: absolute;
+}
+
+/*全部页数*/
+.page{
+	position: relative;
+}
+
+
+.page1{
+	background: deepskyblue;
+}
+.page1_buiding{
+	position: absolute;
+	width: 100%;
+	height: 18%;
+	bottom: 0;
+	left: 0;
+	display: none;
+}
+.element{
+	position: absolute;
+	width: 95%;
+	height: 95%;
+	right: 0;
+	top: 5%;
+}
+.flow1{
+	position: absolute;
+	width: 15%;
+	height: 15%;
+	top: 10%;
+	left: 10%;
+	animation: flow 3s infinite;
+}
+.flow2{
+	position: absolute;
+	width: 15%;
+	height: 15%;
+	top: 10%;
+	right: 10%;
+	animation: flow 3s infinite;
+}
+@keyframes flow{
+	0%{}
+	50%{
+		transform: rotate(360deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+.flight{
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	left: -100%;
+	top: 0%;
+	z-index: 2;
+	animation: flight 3s infinite;
+}
+@keyframes flight{
+	0%{}
+	50%{
+		transform: scale(1.3);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+.txt{
+	position: absolute;
+	width: 60%;
+	height: 40%;
+	top: 15%;
+	left: 30%;
+}
+
+/*第二页*/
+.page2{
+	background: cyan;
+}
+.wasBg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.farm{
+	position: absolute;
+	width: 80%;
+	height: 20%;
+	top: 5%;
+	left: 5%;
+}
+.it{
+	position: absolute;
+	width: 60%;
+	height: 15%;
+	right: -100%;
+	bottom: 5%;
+}
+
+/*第三页*/
+.page3{
+	background: dimgray;
+}
+/*场景二*/
+.station{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.early{
+	position: absolute;
+	width: 15%;
+	height: 8%;
+	left: 0;
+	top: 5%;
+	display: none;
+}
+.last{
+	position: absolute;
+	width: 22%;
+	height: 12%;
+	top: 15%;
+	left: 0;
+	display: none;
+}
+.bus{
+	position: absolute;
+	width: 50%;
+	height: 40%;
+	left: 0;
+	bottom: 5%;
+}
+.avatar{
+	position: absolute;
+	width: 18%;
+	height: 20%;
+	left: 65%;
+	bottom: 7%;
+}
+/*场景二*/
+.teamBg{
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.teamWall{
+	display: none;
+	position: absolute;
+	width: 25%;
+	height: 65%;
+	right: 0;
+	bottom: 0;
+}
+.teamAv{
+	position: absolute;
+	width: 25%;
+	height: 25%;
+	right: 6%;
+	bottom: 59%;
+	display: none;
+	z-index: 2;
+}
+.teamSpace{
+	position: absolute;
+	width: 40%;
+	height: 40%;
+	left: 10%;
+	top: 15%;
+	display: none;
+}
+
+.page4{
+	background: plum;
+}
+.lightBg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.lightOff{
+	position: absolute;
+	width: 12%;
+	height: 45%;
+	left: 3%;
+	bottom: 15%;
+}
+.guide{
+	position: absolute;
+	width: 30%;
+	height: 7%;
+	left: 15%;
+	top: 40%;
+}
+.lightOnBg{
+	position: absolute;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.up{
+	position: absolute;
+	width: 10%;
+	height: 10%;
+	left: 45%;
+	bottom: 3%;
+	animation: up 3s infinite;
+}
+@keyframes up{
+	0%{}
+	50%{
+		bottom: 5%;
+	}
+	100%{
+		bottom: 3%;
+	}
+}
+
+.musicBtn{
+	position: absolute;
+	width: 15%;
+	height: 15%;
+	top: 5%;
+	right: 5%;
+	z-index: 3;
+}

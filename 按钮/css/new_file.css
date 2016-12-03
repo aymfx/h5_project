@@ -1,0 +1,88 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.content{
+	width: 800px;
+	height: 350px;
+	background: cyan;
+	margin: 100px auto;
+}
+
+.one,.two,.three{
+	width: 30%;
+	height: 100%;
+	margin-left: 2%;
+	background: yellow;
+	float: left;
+}
+.icon{
+	width: 100%;
+	height: 60%;
+}
+.icon:hover{
+	transform: rotate(360deg);
+	transition: 500ms;
+}
+.button{
+	width: 80%;
+	height: 50px;
+	margin-top: 50px;
+	display: block;
+	border: 3px solid orangered;
+	margin-left: 30px;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 26px;
+	position: relative;
+}
+.line{
+	background: white;
+	position: absolute;
+}
+.line-left{
+	width: 3px;
+	height: 0;
+	top: -100%;
+	left:-3px ;
+}
+.line-top{
+	width: 0;
+	height: 3px;
+	top: -3px;
+	left: -100%;
+}
+.line-right{
+	width: 3px;
+	height: 0;
+	bottom: -100%;
+	right:-3px ;
+}
+.line-bottom{
+	width: 0;
+	height: 3px;
+	bottom: -3px;
+	right: -100%;
+}
+.button:hover .line-left{
+	height: 111%;
+	top: -3px;
+	transition: 2s;
+}
+.button:hover .line-top{
+	left: 0;
+	width: 100%;
+	transition: 3s;
+}
+.button:hover .line-right{
+	height: 112%;
+	bottom: -3px;
+	transition: 2s;
+}
+.button:hover .line-bottom{
+	right: 0;
+	width: 100%;
+	transition: 3s;
+}
